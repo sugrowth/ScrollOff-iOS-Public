@@ -118,7 +118,7 @@ We believe that technology should enhance our lives, not consume them. ScrollOff
 
 ## Contact & Support
 
-- **Email**: [sugrowth+scolloffios@gmail.com](mailto:sugrowth+scrolloff_ios@gmail.com)
+- **Email**: [sugrowth+scrolloff_ios@gmail.com](mailto:sugrowth+scrolloff_ios@gmail.com)
 - **GitHub**: [@sugrowth](https://github.com/sugrowth)
 - **Issues**: [Report a bug or request a feature](https://github.com/sugrowth/ScrollOff-iOS-Public/issues)
 
