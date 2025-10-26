@@ -1,0 +1,12 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+  <title id="title">ScrollOff — Favicon v4</title>
+  <desc id="desc">Simplified power O for small sizes.</desc>
+  <defs>
+    <style>:root{ --bg:#0B0F14; --ink:#F8FAFC; --lime:#A3E635; }</style>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="var(--bg)"/>
+  <circle cx="16" cy="16" r="11" fill="var(--lime)"/>
+  <circle cx="16" cy="16" r="9" fill="none" stroke="var(--ink)" stroke-width="2.4"/>
+  <rect x="15" y="5" width="2" height="6" rx="1" fill="var(--ink)"/>
+</svg>
