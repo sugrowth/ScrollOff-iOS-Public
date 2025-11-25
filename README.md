@@ -21,7 +21,7 @@
 
 ### Core Features
 
-- **🎯 Earn Your Peek**: Earn time credits by staying away from blocked apps, then spend them when you need access
+- **🎯 Earn Your Guilt-Free Scroll Time**: Earn time credits by staying away from blocked apps, then spend them when you need access
 - **🔒 Smart App Blocking**: Block unlimited apps (Premium/Pro) with intelligent cooldown periods
 - **🌙 No-Go Zone**: Schedule ultra-strict blocking periods for maximum focus (e.g., midnight to 8 AM)
 - **💪 Focus Challenge**: Set timed focus sessions (1-12 hours) and earn bonus credits
@@ -58,7 +58,7 @@
 Start focused work sessions where distracting apps are blocked. Choose from preset durations or create custom timers.
 
 #### Mindfulness Exercises
-Take breaks with guided mindfulness exercises designed to refresh your mind and improve concentration.
+Take time with guided mindfulness exercises designed to refresh your mind and improve concentration.
 
 #### Usage Insights
 See detailed breakdowns of your screen time, including:
@@ -154,5 +154,5 @@ This software and its content are protected by copyright law. Unauthorized repro
 
 <div align="center">
   <p>Built with ❤️ and SwiftUI by the Sugrowth team</p>
-  <p><em>ScrollOff: Earn Your Break</em></p>
+  <p><em>ScrollOff: Guilt-Free Scroll Time</em></p>
 </div>
