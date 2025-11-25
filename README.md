@@ -1,7 +1,7 @@
 <div align="center">
   <img src="Logo/2/scrolloff-banner.svg" alt="ScrollOff Banner" width="600">
 
-  <h3>Take back your time</h3>
+  <h3>Earn Your Break</h3>
 
   <p>
     <strong>ScrollOff</strong> is an iOS app designed to help you break free from endless scrolling and reclaim your most valuable resource: time.
@@ -17,12 +17,22 @@
 
 ## Features
 
-- **Screen Time Management**: Monitor and control your app usage with intelligent tracking
-- **Focus Sessions**: Stay productive with timed focus modes and mindfulness exercises
-- **Usage Analytics**: Beautiful visualizations of your screen time and productivity patterns
-- **Smart Blocking**: Automatically block distracting apps during focus time
-- **Rewards System**: Earn credits for staying focused and achieving your goals
-- **Dark Mode**: Full support for both light and dark appearances
+### Core Features
+
+- **🎯 Earn Your Peek**: Earn time credits by staying away from blocked apps, then spend them when you need access
+- **🔒 Smart App Blocking**: Block unlimited apps (Premium/Pro) with intelligent cooldown periods
+- **🌙 No-Go Zone**: Schedule ultra-strict blocking periods for maximum focus (e.g., midnight to 8 AM)
+- **💪 Focus Challenge**: Set timed focus sessions (1-12 hours) and earn bonus credits
+- **📊 Usage Insights**: Track patterns with 7-day (Premium) or 30-day (Pro) analytics
+- **🎟️ Emergency Tokens**: Purchase temporary access when you truly need it
+- **🔐 Biometric Protection**: Lock settings behind Face ID/Touch ID (Pro)
+- **💼 Per-App Wallets**: Separate credit balances for each blocked app (Pro)
+- **🌐 Custom Domains**: Block distracting websites in Safari (Premium/Pro)
+- **🌓 Dark Mode**: Full support for light and dark appearances
+
+### Privacy First
+
+**100% privacy-focused**: All data stays on your device. No tracking, no servers, no analytics. See our [Privacy Policy](./PRIVACY.md).
 
 ## How to Use the App
 
@@ -56,7 +66,36 @@ See detailed breakdowns of your screen time, including:
 - Productivity scores
 
 #### Rewards & Credits
-Earn credits by completing focus sessions and staying within your usage goals. Use credits to unlock features and track your progress.
+Earn credits by staying away from blocked apps (5 minutes earned per hour of staying focused). Spend earned credits to peek at blocked apps when you need them. Credits roll over for 3-7 days depending on your tier.
+
+## Subscription Tiers
+
+### Free - $0
+- Block up to 3 apps
+- 1-minute peeks
+- 45 minutes daily earning cap
+- Same-day credits only (no rollover)
+
+### Premium - $4.99/month
+- **Unlimited app blocking**
+- 2-minute peeks
+- 90 minutes daily earning cap
+- 3-day credit rollover
+- 7-day usage insights
+- Custom domain blocking
+
+### Pro - $8.99/month or $71.99/year
+- **14-day free trial**
+- All Premium features
+- 5-minute peeks
+- 120 minutes daily earning cap
+- 7-day credit rollover
+- 30-day usage insights
+- Per-app wallets
+- Biometric protection
+- 3 free emergency tokens per month
+
+[Download on the App Store](https://apps.apple.com/app/scrolloff/id6738455506) _(Coming Soon)_
 
 ## Requirements
 
@@ -132,5 +171,5 @@ This software and its content are protected by copyright law. Unauthorized repro
 
 <div align="center">
   <p>Built with ❤️ and SwiftUI by the Sugrowth team</p>
-  <p><em>Take back your time, one focus session at a time.</em></p>
+  <p><em>ScrollOff: Earn Your Break</em></p>
 </div>
