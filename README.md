@@ -1,7 +1,7 @@
 <div align="center">
   <img src="Logo/2/scrolloff-banner.svg" alt="ScrollOff Banner" width="600">
 
-  <h3>Earn Your Break</h3>
+  <h3>Guilt-Free Scroll Time</h3>
 
   <p>
     <strong>ScrollOff</strong> is an iOS app designed to help you break free from endless scrolling and reclaim your most valuable resource: time.
