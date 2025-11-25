@@ -7,6 +7,8 @@
     <strong>ScrollOff</strong> is an iOS app designed to help you break free from endless scrolling and reclaim your most valuable resource: time.
   </p>
 
+  <p><em>📚 This is a public documentation repository. For support and feature requests, please open an issue.</em></p>
+
   [![iOS](https://img.shields.io/badge/iOS-17.0+-000000?style=flat&logo=apple&logoColor=white)](https://www.apple.com/ios/)
   [![Swift](https://img.shields.io/badge/Swift-5.9+-F05138?style=flat&logo=swift&logoColor=white)](https://swift.org)
   [![SwiftUI](https://img.shields.io/badge/SwiftUI-3.0+-0066CC?style=flat&logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
@@ -103,41 +105,22 @@ Earn credits by staying away from blocked apps (5 minutes earned per hour of sta
 - iPhone or iPad
 - Screen Time permissions
 
-## Installation
+## Download
 
-### From Source
+ScrollOff is available exclusively on the App Store:
 
-1. Clone the repository:
-```bash
-git clone https://github.com/sugrowth/ScrollOff-iOS-Public.git
-cd ScrollOff-iOS-Public
-```
+[Download on the App Store](https://apps.apple.com/app/scrolloff/id6738455506) _(Coming Soon)_
 
-2. Open the project in Xcode:
-```bash
-open ScrollOffApp.xcodeproj
-```
+## Technology
 
-3. Select your target device or simulator
+ScrollOff is built with modern iOS technologies:
 
-4. Build and run the project (⌘R)
-
-### Dependencies
-
-This project uses Swift Package Manager for dependency management. Dependencies will be automatically resolved when you open the project in Xcode.
-
-## Architecture
-
-ScrollOff is built with modern iOS development practices:
-
-- **SwiftUI**: Declarative UI framework for all views
-- **Swift Package Manager**: Modular architecture with separate packages for:
-  - `EarnEngine`: Rewards and credit system
-  - `InsightsEngine`: Analytics and data visualization
-  - `BehaviorScience`: Mindfulness and focus features
-  - `BlockingEngine`: App blocking functionality
-- **Combine**: Reactive programming for state management
-- **ScreenTime API**: Native iOS screen time monitoring
+- **SwiftUI** for native iOS interface
+- **Swift 5.9+** with modern concurrency
+- **SwiftData** for local, privacy-first data storage
+- **Screen Time API** for app monitoring and blocking
+- **StoreKit 2** for subscriptions and in-app purchases
+- **Combine** for reactive data flow
 
 ## About
 
