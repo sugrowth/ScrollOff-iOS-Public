@@ -97,7 +97,38 @@ Earn credits by staying away from blocked apps (5 minutes earned per hour of sta
 - Biometric protection
 - 3 free emergency tokens per month
 
-[Download on the App Store](https://apps.apple.com/app/scrolloff/id6738455506) _(Coming Soon)_
+[Download on the App Store](https://apps.apple.com/app/scrolloff/id6755688472)
+
+---
+
+## Important: This is NOT Parental Control
+
+ScrollOff is designed for **individual self-management only**:
+
+| What ScrollOff Does | What ScrollOff Does NOT Do |
+|---------------------|---------------------------|
+| You manage your **own** device | No remote monitoring of others |
+| You choose which apps to block for **yourself** | No cross-device management |
+| You control when to lift restrictions | No parental oversight features |
+| Self-imposed, voluntary restrictions | No ability for others to control your device |
+
+This app helps adults and individuals voluntarily reduce their own screen time through self-imposed restrictions.
+
+---
+
+## Why We Use Screen Time API (Family Controls)
+
+ScrollOff requires Apple's Family Controls entitlement to provide its core functionality:
+
+| API | Purpose |
+|-----|---------|
+| **FamilyActivitySelection** | Let users choose which apps to block |
+| **ManagedSettings** | Apply shields to blocked apps |
+| **DeviceActivityMonitor** | Track when blocked apps are accessed to deduct credits |
+
+All Screen Time data is processed locally on your device and never transmitted anywhere. Apple's privacy framework ensures this data remains protected.
+
+---
 
 ## Requirements
 
@@ -109,7 +140,7 @@ Earn credits by staying away from blocked apps (5 minutes earned per hour of sta
 
 ScrollOff is available exclusively on the App Store:
 
-[Download on the App Store](https://apps.apple.com/app/scrolloff/id6738455506) _(Coming Soon)_
+[Download on the App Store](https://apps.apple.com/app/scrolloff/id6755688472)
 
 ## Technology
 
