@@ -34,7 +34,7 @@
 
 ### Privacy First
 
-**100% privacy-focused**: All data stays on your device. No tracking, no servers, no analytics. See our [Privacy Policy](./PRIVACY.md).
+**100% privacy-focused**: All data stays on your device. No tracking, no servers, no analytics. See our [Privacy Policy](./PRIVACY.md) and [Terms of Use](./TERMS.md).
 
 ## How to Use the App
 
