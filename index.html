@@ -324,13 +324,17 @@
         .carousel-dots {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 6px;
             margin-top: 24px;
+            flex-wrap: wrap;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .carousel-dot {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             background: rgba(29, 192, 191, 0.3);
             cursor: pointer;
@@ -340,7 +344,7 @@
 
         .carousel-dot.active {
             background: var(--teal);
-            transform: scale(1.2);
+            transform: scale(1.3);
         }
 
         .carousel-dot:hover {
@@ -1166,23 +1170,82 @@
                     <div class="carousel-container">
                         <div class="carousel-slides" id="carouselSlides">
                             <div class="carousel-slide">
-                                <img src="assets/screenshot-1.png" alt="ScrollOff Free Tier - Guilt-Free Time Earned">
+                                <img src="assets/screenshot-1.png" alt="ScrollOff App Screenshot 1">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/screenshot-2.png" alt="ScrollOff Premium - Guilt-Free Time Earned">
+                                <img src="assets/screenshot-2.png" alt="ScrollOff App Screenshot 2">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/screenshot-3.png" alt="ScrollOff Pro - Guilt-Free Time Earned">
+                                <img src="assets/screenshot-3.png" alt="ScrollOff App Screenshot 3">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-4.png" alt="ScrollOff App Screenshot 4">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-5.png" alt="ScrollOff App Screenshot 5">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-6.png" alt="ScrollOff App Screenshot 6">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-7.png" alt="ScrollOff App Screenshot 7">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-8.png" alt="ScrollOff App Screenshot 8">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-9.png" alt="ScrollOff App Screenshot 9">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-10.png" alt="ScrollOff App Screenshot 10">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-11.png" alt="ScrollOff App Screenshot 11">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-12.png" alt="ScrollOff App Screenshot 12">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-13.png" alt="ScrollOff App Screenshot 13">
                             </div>
                         </div>
                     </div>
                     <div class="carousel-dots">
-                        <button class="carousel-dot active" data-slide="0" aria-label="Show Free tier screenshot"></button>
-                        <button class="carousel-dot" data-slide="1" aria-label="Show Premium tier screenshot"></button>
-                        <button class="carousel-dot" data-slide="2" aria-label="Show Pro tier screenshot"></button>
+                        <button class="carousel-dot active" data-slide="0" aria-label="Screenshot 1"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="Screenshot 2"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="Screenshot 3"></button>
+                        <button class="carousel-dot" data-slide="3" aria-label="Screenshot 4"></button>
+                        <button class="carousel-dot" data-slide="4" aria-label="Screenshot 5"></button>
+                        <button class="carousel-dot" data-slide="5" aria-label="Screenshot 6"></button>
+                        <button class="carousel-dot" data-slide="6" aria-label="Screenshot 7"></button>
+                        <button class="carousel-dot" data-slide="7" aria-label="Screenshot 8"></button>
+                        <button class="carousel-dot" data-slide="8" aria-label="Screenshot 9"></button>
+                        <button class="carousel-dot" data-slide="9" aria-label="Screenshot 10"></button>
+                        <button class="carousel-dot" data-slide="10" aria-label="Screenshot 11"></button>
+                        <button class="carousel-dot" data-slide="11" aria-label="Screenshot 12"></button>
+                        <button class="carousel-dot" data-slide="12" aria-label="Screenshot 13"></button>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-header reveal">
+            <div class="section-label">See It In Action</div>
+            <h2 class="section-title">Watch How ScrollOff Works</h2>
+            <p class="section-desc">
+                A quick look at how you can turn your focus into guilt-free scroll time.
+            </p>
+        </div>
+        <div class="video-container reveal">
+            <iframe
+                src="https://www.youtube.com/embed/FdWlBJhHi5U"
+                title="ScrollOff Demo Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
 
@@ -1259,25 +1322,6 @@
                 <h3>Spend Guilt-Free</h3>
                 <p>When you genuinely want to check an app, spend your earned credits for a timed peek. No guilt. No shame. You earned it.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="video-header reveal">
-            <div class="section-label">See It In Action</div>
-            <h2 class="section-title">Watch How ScrollOff Works</h2>
-            <p class="section-desc">
-                A quick look at how you can turn your focus into guilt-free scroll time.
-            </p>
-        </div>
-        <div class="video-container reveal">
-            <iframe
-                src="https://www.youtube.com/embed/FdWlBJhHi5U"
-                title="ScrollOff Demo Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
         </div>
     </section>
 
@@ -1539,7 +1583,7 @@
         }
 
         function nextSlide() {
-            const next = (currentSlide + 1) % 3;
+            const next = (currentSlide + 1) % 13;
             goToSlide(next);
         }
 
