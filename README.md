@@ -28,7 +28,6 @@
 - **📊 Usage Insights**: Track patterns with 7-day (Premium) or 30-day (Pro) analytics
 - **🎟️ Emergency Tokens**: Purchase temporary access when you truly need it
 - **🔐 Biometric Protection**: Lock settings behind Face ID/Touch ID (Pro)
-- **💼 Per-App Wallets**: Separate credit balances for each blocked app (Pro)
 - **🌐 Custom Domains**: Block distracting websites in Safari (Premium/Pro)
 - **🌓 Dark Mode**: Full support for light and dark appearances
 
@@ -93,7 +92,6 @@ Earn credits by staying away from blocked apps (5 minutes earned per hour of sta
 - 120 minutes daily earning cap
 - 7-day credit rollover
 - 30-day usage insights
-- Per-app wallets
 - Biometric protection
 - 3 free emergency tokens per month
 

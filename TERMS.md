@@ -20,7 +20,7 @@ ScrollOff offers the following subscription options:
 |------|-------|----------|
 | **Free** | $0 | Block up to 3 apps, 45-minute daily earning cap, same-day credits only |
 | **Premium** | $4.99/month | Unlimited app blocking, 90-minute daily earning cap, 3-day credit rollover, 7-day insights |
-| **Pro** | $8.99/month or $71.99/year | All Premium features plus 120-minute daily cap, 7-day rollover, 30-day insights, per-app wallets, biometric protection |
+| **Pro** | $8.99/month or $71.99/year | All Premium features plus 120-minute daily cap, 7-day rollover, 30-day insights, biometric protection |
 
 ### Auto-Renewal Terms
 
