@@ -304,6 +304,7 @@
 
         .carousel-container {
             width: 100%;
+            max-height: 580px;
             overflow: hidden;
             border-radius: 40px;
             box-shadow:
@@ -317,16 +318,21 @@
         }
 
         .carousel-slide {
-            width: 100%;
             min-width: 100%;
             flex-shrink: 0;
         }
 
         .carousel-slide img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            max-height: 580px;
+            object-fit: cover;
+            object-position: top;
             display: block;
             border-radius: 40px;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         .carousel-dots {
@@ -1051,6 +1057,14 @@
                 width: 280px;
             }
 
+            .carousel-container {
+                max-height: 650px;
+            }
+
+            .carousel-slide img {
+                max-height: 650px;
+            }
+
             .hero h1 {
                 font-size: 4.5rem;
             }
@@ -1171,10 +1185,12 @@
 
             .carousel-container {
                 border-radius: 32px;
+                max-height: 510px;
             }
 
             .carousel-slide img {
                 border-radius: 32px;
+                max-height: 510px;
             }
         }
 
@@ -1257,10 +1273,12 @@
 
             .carousel-container {
                 border-radius: 28px;
+                max-height: 425px;
             }
 
             .carousel-slide img {
                 border-radius: 28px;
+                max-height: 425px;
             }
 
             .carousel-dots {
