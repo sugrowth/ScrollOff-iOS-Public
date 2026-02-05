@@ -28,7 +28,8 @@
 - **📊 Usage Insights**: Track patterns with 7-day (Premium) or 30-day (Pro) analytics
 - **🎟️ Emergency Tokens**: Purchase temporary access when you truly need it
 - **🔐 Biometric Protection**: Lock settings behind Face ID/Touch ID (Pro)
-- **🌐 Custom Domains**: Block distracting websites in Safari (Premium/Pro)
+- **📝 Notes to Self**: Create quick "If this... then I'll..." rescue plans for when urges hit
+- **✨ Daily Inspiration**: Fresh motivational quotes each day to keep you focused
 - **🌓 Dark Mode**: Full support for light and dark appearances
 
 ### Privacy First
