@@ -1337,7 +1337,7 @@
             <div class="hero-visual">
                 <div class="phone-carousel">
                     <div class="carousel-container">
-                        <div class="carousel-slides" id="carouselSlides">
+                        <div class="carousel-slides" id="carouselSlides" style="transform: translateX(-900%);">
                             <div class="carousel-slide">
                                 <img src="assets/screenshot-1.png" alt="ScrollOff App Screenshot 1">
                             </div>
@@ -1377,7 +1377,7 @@
                         </div>
                     </div>
                     <div class="carousel-dots">
-                        <button class="carousel-dot active" data-slide="0" aria-label="Screenshot 1"></button>
+                        <button class="carousel-dot" data-slide="0" aria-label="Screenshot 1"></button>
                         <button class="carousel-dot" data-slide="1" aria-label="Screenshot 2"></button>
                         <button class="carousel-dot" data-slide="2" aria-label="Screenshot 3"></button>
                         <button class="carousel-dot" data-slide="3" aria-label="Screenshot 4"></button>
@@ -1386,7 +1386,7 @@
                         <button class="carousel-dot" data-slide="6" aria-label="Screenshot 7"></button>
                         <button class="carousel-dot" data-slide="7" aria-label="Screenshot 8"></button>
                         <button class="carousel-dot" data-slide="8" aria-label="Screenshot 9"></button>
-                        <button class="carousel-dot" data-slide="9" aria-label="Screenshot 10"></button>
+                        <button class="carousel-dot active" data-slide="9" aria-label="Screenshot 10"></button>
                         <button class="carousel-dot" data-slide="10" aria-label="Screenshot 11"></button>
                         <button class="carousel-dot" data-slide="11" aria-label="Screenshot 12"></button>
                     </div>
@@ -1736,7 +1736,7 @@
         // Screenshot Carousel
         const carouselSlides = document.getElementById('carouselSlides');
         const dots = document.querySelectorAll('.carousel-dot');
-        let currentSlide = 0;
+        let currentSlide = 9;
         let autoSlideInterval;
 
         function goToSlide(index) {
