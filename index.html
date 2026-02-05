@@ -319,8 +319,9 @@
             height: auto;
             display: block;
             border-radius: 40px;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         .carousel-dots {
