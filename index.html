@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScrollOff — Guilt-Free Scroll Time</title>
-    <meta name="description" content="Stop doom-scrolling the hard way. Earn your screen time by staying focused. ScrollOff rewards your discipline instead of punishing your habits.">
-    <meta name="keywords" content="screen time, app blocker, focus, productivity, dopamine detox, block apps, social media, digital wellness">
+    <title>ScrollOff — Stop Doom Scrolling & Earn Guilt-Free Screen Time</title>
+    <meta name="description" content="Tired of doom scrolling? Can't stop checking your phone? ScrollOff helps you break phone addiction by rewarding your focus. Block Instagram, TikTok, Reddit — earn screen time guilt-free. No more dark circles from late-night scrolling.">
+    <meta name="keywords" content="doom scrolling, doomscrolling, stop doom scrolling, phone addiction, social media addiction, screen time app, app blocker, block instagram, block tiktok, block reddit, digital detox, dopamine detox, too much screen time, reduce screen time, phone addiction help, cant stop scrolling, tired from phone, dark circles phone, screen time management, focus app, productivity app, distraction blocker, attention span, break phone addiction, mindful phone use, digital wellness, digital wellbeing, phone detox, self control app, app limiter, screen time control, mental health app, phone usage tracker, social media blocker, break bad habits, phone fatigue, digital fatigue, instagram addiction, tiktok addiction, scrolling addiction, phone break app, mindfulness app, concentration app, screen time limit, ios app blocker, iphone screen time">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="ScrollOff — Guilt-Free Scroll Time">
-    <meta property="og:description" content="Block distracting apps. Earn time by staying away. Use it guilt-free.">
+    <meta property="og:title" content="ScrollOff — Stop Doom Scrolling & Earn Guilt-Free Screen Time">
+    <meta property="og:description" content="Tired of doom scrolling? Break your phone addiction. Block Instagram, TikTok, Reddit — earn screen time by staying focused. No guilt, no shame.">
     <meta property="og:image" content="https://raw.githubusercontent.com/sugrowth/ScrollOff-iOS-Public/main/assets/app-icon.png">
     <meta property="og:url" content="https://scrolloff.app">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ScrollOff">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ScrollOff — Guilt-Free Scroll Time">
-    <meta name="twitter:description" content="Block distracting apps. Earn time by staying away. Use it guilt-free.">
+    <meta name="twitter:title" content="ScrollOff — Stop Doom Scrolling & Earn Screen Time">
+    <meta name="twitter:description" content="Tired of doom scrolling? Break phone addiction by earning screen time. Block distracting apps guilt-free.">
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sugrowth">
+    <meta name="theme-color" content="#1DC0BF">
+    <link rel="canonical" href="https://scrolloff.app">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="Logo/2/scrolloff-favicon.svg">
@@ -1032,6 +1039,41 @@
         /* ═══════════════════════════════════════════
            RESPONSIVE
         ═══════════════════════════════════════════ */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1400px;
+            }
+
+            .hero-inner {
+                max-width: 1400px;
+                gap: 100px;
+            }
+
+            .phone-carousel {
+                width: 320px;
+            }
+
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .hero-sub {
+                font-size: 1.35rem;
+            }
+
+            .section-title {
+                font-size: 3.5rem;
+            }
+
+            .steps {
+                max-width: 1200px;
+            }
+
+            .feature-grid {
+                max-width: 1100px;
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero-inner {
                 grid-template-columns: 1fr;
@@ -1061,14 +1103,30 @@
                 display: none;
             }
 
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .section-desc {
+                font-size: 1rem;
+            }
+
             .stats-inner {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-number {
+                font-size: 2rem;
             }
 
             .problem-cards,
             .steps,
             .pricing-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .problem-card .number {
+                font-size: 2.5rem;
             }
 
             .feature-grid {
@@ -1084,6 +1142,21 @@
             .privacy-card {
                 flex-direction: column;
                 text-align: center;
+                padding: 32px 24px;
+            }
+
+            .privacy-icon {
+                width: 64px;
+                height: 64px;
+                font-size: 2rem;
+            }
+
+            .price-card {
+                padding: 32px 24px;
+            }
+
+            .price-amount {
+                font-size: 2.5rem;
             }
 
             .footer-inner {
@@ -1097,6 +1170,18 @@
                 justify-content: center;
                 gap: 24px;
             }
+
+            .phone-carousel {
+                width: 220px;
+            }
+
+            .carousel-container {
+                border-radius: 32px;
+            }
+
+            .carousel-slide img {
+                border-radius: 32px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1104,20 +1189,93 @@
                 padding: 100px 16px 60px;
             }
 
+            .hero h1 {
+                font-size: 2rem;
+                letter-spacing: -1px;
+            }
+
+            .hero-sub {
+                font-size: 1rem;
+            }
+
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+
+            .btn {
+                padding: 14px 24px;
+                font-size: 0.9rem;
+            }
+
             section {
                 padding: 60px 16px;
             }
 
+            .section-label {
+                font-size: 0.7rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-desc {
+                font-size: 0.95rem;
+            }
+
             .stats-inner {
-                gap: 24px;
+                gap: 16px;
             }
 
             .stat-number {
+                font-size: 1.75rem;
+            }
+
+            .stat-label {
+                font-size: 0.75rem;
+            }
+
+            .step {
+                padding: 32px 24px;
+            }
+
+            .step-icon {
                 font-size: 2rem;
+            }
+
+            .feature-card {
+                padding: 24px 20px;
+            }
+
+            .faq-question {
+                font-size: 0.9rem;
+                padding: 16px 20px;
+            }
+
+            .cta h2 {
+                font-size: 1.5rem;
             }
 
             .phone-carousel {
                 width: 200px;
+            }
+
+            .carousel-container {
+                border-radius: 28px;
+            }
+
+            .carousel-slide img {
+                border-radius: 28px;
+            }
+
+            .carousel-dots {
+                gap: 8px;
+            }
+
+            .carousel-dot {
+                width: 8px;
+                height: 8px;
             }
         }
     </style>
