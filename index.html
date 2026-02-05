@@ -304,6 +304,7 @@
 
         .carousel-container {
             width: 100%;
+            max-height: 480px;
             overflow: hidden;
             border-radius: 40px;
             box-shadow:
@@ -323,7 +324,10 @@
 
         .carousel-slide img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            object-position: top;
             display: block;
             border-radius: 40px;
             -webkit-transform: translateZ(0);
@@ -1177,10 +1181,12 @@
 
             .carousel-container {
                 border-radius: 28px;
+                max-height: 400px;
             }
 
             .carousel-slide img {
                 border-radius: 28px;
+                max-height: 400px;
             }
         }
 
@@ -1263,10 +1269,12 @@
 
             .carousel-container {
                 border-radius: 24px;
+                max-height: 350px;
             }
 
             .carousel-slide img {
                 border-radius: 24px;
+                max-height: 350px;
             }
 
             .carousel-dots {
