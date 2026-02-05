@@ -84,7 +84,6 @@ Earn credits by staying away from blocked apps (5 minutes earned per hour of sta
 - 90 minutes daily earning cap
 - 3-day credit rollover
 - 7-day usage insights
-- Custom domain blocking
 
 ### Pro - $8.99/month or $71.99/year
 - **14-day free trial**
@@ -95,6 +94,8 @@ Earn credits by staying away from blocked apps (5 minutes earned per hour of sta
 - 30-day usage insights
 - Biometric protection
 - 3 free emergency tokens per month
+
+*Prices shown in USD. Actual prices may vary by region and are determined by the App Store.*
 
 [Download on the App Store](https://apps.apple.com/app/scrolloff/id6755688472)
 
