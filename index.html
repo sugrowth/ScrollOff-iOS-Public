@@ -282,7 +282,7 @@
             height: 20px;
         }
 
-        /* Phone Mockup / Screenshot Carousel */
+        /* Screenshot Carousel */
         .hero-visual {
             position: relative;
             display: flex;
@@ -293,58 +293,39 @@
         .phone-carousel {
             position: relative;
             width: 280px;
-            height: 580px;
         }
 
-        .phone-frame {
-            position: relative;
+        .carousel-container {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(145deg, #1a1a2e 0%, #0d0d15 100%);
-            border-radius: 48px;
-            padding: 12px;
+            overflow: hidden;
+            border-radius: 40px;
             box-shadow:
                 0 50px 100px rgba(0, 0, 0, 0.5),
-                0 0 0 1px rgba(255, 255, 255, 0.1),
-                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-            overflow: hidden;
-        }
-
-        .phone-screen-carousel {
-            width: 100%;
-            height: 100%;
-            border-radius: 38px;
-            overflow: hidden;
-            position: relative;
+                0 0 40px rgba(29, 192, 191, 0.15);
         }
 
         .carousel-slides {
             display: flex;
-            width: 300%;
-            height: 100%;
             transition: transform 0.5s ease-in-out;
         }
 
         .carousel-slide {
-            width: 33.333%;
-            height: 100%;
+            min-width: 100%;
             flex-shrink: 0;
         }
 
         .carousel-slide img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 38px;
+            height: auto;
+            display: block;
+            border-radius: 40px;
         }
 
         .carousel-dots {
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
+            justify-content: center;
             gap: 10px;
+            margin-top: 24px;
         }
 
         .carousel-dot {
@@ -1033,7 +1014,6 @@
 
             .phone-carousel {
                 width: 240px;
-                height: 500px;
             }
         }
 
@@ -1098,8 +1078,7 @@
             }
 
             .phone-carousel {
-                width: 220px;
-                height: 460px;
+                width: 200px;
             }
         }
     </style>
@@ -1148,18 +1127,16 @@
             </div>
             <div class="hero-visual">
                 <div class="phone-carousel">
-                    <div class="phone-frame">
-                        <div class="phone-screen-carousel">
-                            <div class="carousel-slides" id="carouselSlides">
-                                <div class="carousel-slide">
-                                    <img src="assets/screenshot-1.png" alt="ScrollOff Free Tier - Guilt-Free Time Earned">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="assets/screenshot-2.png" alt="ScrollOff Premium - Guilt-Free Time Earned">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="assets/screenshot-3.png" alt="ScrollOff Pro - Guilt-Free Time Earned">
-                                </div>
+                    <div class="carousel-container">
+                        <div class="carousel-slides" id="carouselSlides">
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-1.png" alt="ScrollOff Free Tier - Guilt-Free Time Earned">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-2.png" alt="ScrollOff Premium - Guilt-Free Time Earned">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/screenshot-3.png" alt="ScrollOff Pro - Guilt-Free Time Earned">
                             </div>
                         </div>
                     </div>
@@ -1492,7 +1469,7 @@
 
         function goToSlide(index) {
             currentSlide = index;
-            carouselSlides.style.transform = `translateX(-${index * 33.333}%)`;
+            carouselSlides.style.transform = `translateX(-${index * 100}%)`;
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
