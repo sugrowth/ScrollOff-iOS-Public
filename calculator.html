@@ -368,11 +368,18 @@
             width: 100%;
             height: 8px;
             border-radius: 4px;
-            background: linear-gradient(to right, #1DC0BF 0%, #1DC0BF 30%, #1A242F 30%, #1A242F 100%);
+            background: linear-gradient(to right, #1DC0BF 30%, #1A242F 30%);
             -webkit-appearance: none;
             appearance: none;
             cursor: pointer;
             outline: none;
+        }
+
+        .slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: transparent;
         }
 
         .slider::-webkit-slider-thumb {
@@ -385,6 +392,7 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(29, 192, 191, 0.4);
             border: none;
+            margin-top: -8px;
         }
 
         .slider::-moz-range-thumb {
