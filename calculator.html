@@ -392,6 +392,25 @@
             border: none;
         }
 
+        /* Slider track styling for mobile */
+        .slider::-webkit-slider-runnable-track {
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(to right, var(--teal) 0%, var(--teal) var(--value, 30%), var(--dark-surface) var(--value, 30%), var(--dark-surface) 100%);
+        }
+
+        .slider::-moz-range-track {
+            height: 8px;
+            border-radius: 4px;
+            background: var(--dark-surface);
+        }
+
+        .slider::-moz-range-progress {
+            height: 8px;
+            border-radius: 4px;
+            background: var(--teal);
+        }
+
         .slider-labels {
             display: flex;
             justify-content: space-between;
@@ -824,6 +843,11 @@
         .btn svg {
             width: 20px;
             height: 20px;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            white-space: nowrap;
         }
 
         /* Footer */
@@ -914,6 +938,16 @@
 
             .bar-container {
                 width: 100%;
+                min-height: 24px;
+            }
+
+            .bar-fill {
+                min-width: 20px;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                padding: 14px 22px;
             }
 
             .footer-inner {
@@ -1163,7 +1197,7 @@
                         Start Earning Your Time
                     </a>
                     <button class="download-btn" id="downloadBtn" onclick="downloadResults()">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v6h4V9h3.67L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7 2l6.67-7H15V9h-4v6H7.33L12 22z"/></svg>
                         Download Results
                     </button>
                 </div>
@@ -1233,6 +1267,14 @@
             return `${days} days`;
         }
 
+        function updateSliderTrack(slider) {
+            const min = slider.min || 0;
+            const max = slider.max || 100;
+            const value = slider.value;
+            const percentage = ((value - min) / (max - min)) * 100;
+            slider.style.setProperty('--value', `${percentage}%`);
+        }
+
         function calculate() {
             // Get total from all category sliders
             let totalMinutes = 0;
@@ -1240,6 +1282,7 @@
                 const mins = parseInt(sliders[key].slider.value) || 0;
                 sliders[key].display.textContent = formatTime(mins);
                 totalMinutes += mins;
+                updateSliderTrack(sliders[key].slider);
             }
 
             // Update total display
