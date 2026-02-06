@@ -157,6 +157,95 @@
             box-shadow: 0 8px 24px rgba(29, 192, 191, 0.3);
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            z-index: 200;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(11, 15, 20, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 150;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--teal);
+        }
+
+        .mobile-menu .nav-cta {
+            margin-top: 16px;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+        }
+
         /* Hero */
         .hero {
             padding: 140px 24px 40px;
@@ -344,6 +433,67 @@
 
         .results-header p {
             color: var(--gray-text);
+        }
+
+        .severity-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .severity-badge.green {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .severity-badge.yellow {
+            background: rgba(234, 179, 8, 0.15);
+            color: #eab308;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+        }
+
+        .severity-badge.orange {
+            background: rgba(249, 115, 22, 0.15);
+            color: #f97316;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+
+        .severity-badge.red {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark-surface);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid rgba(29, 192, 191, 0.2);
+            transition: all 0.2s;
+            margin-top: 24px;
+        }
+
+        .download-btn:hover {
+            background: rgba(29, 192, 191, 0.1);
+            border-color: var(--teal);
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
         }
 
         .time-cards {
@@ -685,11 +835,27 @@
                 <a href="index.html#how">How It Works</a>
                 <a href="features.html">Features</a>
                 <a href="who-is-this-for.html">Who's It For</a>
+                <a href="calculator.html">Time Wasted</a>
                 <a href="index.html#pricing">Pricing</a>
                 <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank">Download</a>
             </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#how">How It Works</a>
+        <a href="features.html">Features</a>
+        <a href="who-is-this-for.html">Who's It For</a>
+        <a href="calculator.html">Time Wasted</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank">Download</a>
+    </div>
 
     <!-- Hero -->
     <section class="hero">
@@ -756,6 +922,7 @@
                 <div class="results-header">
                     <h2>Your Wasted Time</h2>
                     <p>Based on <span id="totalDaily">4h 30m</span> daily with <span id="regretDisplay">60%</span> regret</p>
+                    <div class="severity-badge yellow" id="severityBadge">⚠️ Moderate Concern</div>
                 </div>
 
                 <div class="time-cards">
@@ -851,6 +1018,10 @@
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
                         Start Earning Your Time
                     </a>
+                    <button class="download-btn" id="downloadPdf" onclick="downloadAsPDF()">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v6h4V9h3.67L12 2z"/></svg>
+                        Download Results as PDF
+                    </button>
                 </div>
             </div>
         </div>
@@ -886,6 +1057,16 @@
     </footer>
 
     <script>
+        // Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
         // Calculator Logic
         const hoursInput = document.getElementById('hours');
         const minutesInput = document.getElementById('minutes');
@@ -947,6 +1128,25 @@
 
             // Saved time (half of wasted)
             document.getElementById('savedTime').textContent = `${Math.round(wastedHoursYearly / 2)} hours`;
+
+            // Update severity badge based on wasted hours daily
+            const wastedHoursDaily = wastedMinutesDaily / 60;
+            const badge = document.getElementById('severityBadge');
+            badge.classList.remove('green', 'yellow', 'orange', 'red');
+
+            if (wastedHoursDaily < 1) {
+                badge.className = 'severity-badge green';
+                badge.textContent = '✓ Looking Good!';
+            } else if (wastedHoursDaily < 2) {
+                badge.className = 'severity-badge yellow';
+                badge.textContent = '⚠️ Room for Improvement';
+            } else if (wastedHoursDaily < 4) {
+                badge.className = 'severity-badge orange';
+                badge.textContent = '⚠️ Moderate Concern';
+            } else {
+                badge.className = 'severity-badge red';
+                badge.textContent = '🚨 Significant Time Loss';
+            }
         }
 
         // Sync slider with inputs
@@ -981,6 +1181,76 @@
 
         // Initial calculation
         calculate();
+
+        // PDF Download function
+        function downloadAsPDF() {
+            const totalDaily = document.getElementById('totalDaily').textContent;
+            const regretDisplay = document.getElementById('regretDisplay').textContent;
+            const wastedDaily = document.getElementById('wastedDaily').textContent;
+            const wastedWeekly = document.getElementById('wastedWeekly').textContent;
+            const wastedMonthly = document.getElementById('wastedMonthly').textContent;
+            const wastedYearly = document.getElementById('wastedYearly').textContent;
+            const severity = document.getElementById('severityBadge').textContent;
+            const savedTime = document.getElementById('savedTime').textContent;
+
+            const content = `
+╔══════════════════════════════════════════════════════════════╗
+║              YOUR SCREEN TIME ANALYSIS                       ║
+║                    from ScrollOff                            ║
+╚══════════════════════════════════════════════════════════════╝
+
+📱 Daily Screen Time: ${totalDaily}
+📊 Regretted Usage: ${regretDisplay}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+${severity}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏰ TIME YOU'RE WASTING:
+
+   Per Day:    ${wastedDaily}
+   Per Week:   ${wastedWeekly}
+   Per Month:  ${wastedMonthly}
+   Per Year:   ${wastedYearly}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 WITH SCROLLOFF, YOU COULD SAVE:
+
+   ${savedTime} per year
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 WHAT YOU COULD DO INSTEAD:
+
+   📚 Read ${document.getElementById('books').textContent} books per year
+   🏃 Exercise ${document.getElementById('workouts').textContent} times per year
+   🎸 Learn an instrument in ${document.getElementById('skillMonths').textContent} months
+   😴 Get ${document.getElementById('extraSleep').textContent} more sleep per day
+   👨‍👩‍👧 Spend ${document.getElementById('familyTime').textContent} more hours with family weekly
+   💼 Work on a side project for ${document.getElementById('projectHours').textContent} hours/year
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ready to take back your time?
+Download ScrollOff: https://scrolloff.app
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generated on ${new Date().toLocaleDateString()}
+            `.trim();
+
+            // Create blob and download
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'my-screen-time-analysis.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
     </script>
 </body>
 </html>
