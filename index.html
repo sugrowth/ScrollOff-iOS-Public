@@ -754,6 +754,29 @@
             line-height: 1.6;
         }
 
+        a.feature-card {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        a.feature-card:hover {
+            border-color: rgba(29, 192, 191, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .feature-link {
+            color: var(--teal);
+            font-size: 0.8rem;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        a.feature-card:hover .feature-link {
+            opacity: 1;
+        }
+
         .feature-highlight {
             grid-column: span 2;
             background: linear-gradient(135deg, rgba(29, 192, 191, 0.1) 0%, rgba(11, 127, 149, 0.05) 100%);
@@ -1455,7 +1478,7 @@
             </a>
             <div class="nav-links">
                 <a href="#how">How It Works</a>
-                <a href="#features">Features</a>
+                <a href="features.html">Features</a>
                 <a href="#pricing">Pricing</a>
                 <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank">Download</a>
             </div>
@@ -1653,43 +1676,43 @@
             </p>
         </div>
         <div class="feature-grid">
-            <div class="feature-card feature-highlight reveal">
+            <a href="features.html#no-go-zones" class="feature-card feature-highlight reveal">
                 <div class="icon">🚫</div>
                 <div>
-                    <h3>No-Go Zones</h3>
+                    <h3>No-Go Zones <span class="feature-link">Learn more →</span></h3>
                     <p>Schedule hours of absolute zero access — like midnight to 8 AM. No credits, no peeks, no exceptions. For when you need the hard line.</p>
                 </div>
-            </div>
-            <div class="feature-card reveal">
+            </a>
+            <a href="features.html#focus-challenges" class="feature-card reveal">
                 <div class="icon">💪</div>
-                <h3>Focus Challenges</h3>
+                <h3>Focus Challenges <span class="feature-link">→</span></h3>
                 <p>Set 1-12 hour focus sessions and earn bonus credits on top of your hourly earnings.</p>
-            </div>
-            <div class="feature-card reveal">
+            </a>
+            <a href="features.html#usage-insights" class="feature-card reveal">
                 <div class="icon">📊</div>
-                <h3>Usage Insights</h3>
+                <h3>Usage Insights <span class="feature-link">→</span></h3>
                 <p>See your patterns with 7-day or 30-day analytics. Understand your habits to break them.</p>
-            </div>
-            <div class="feature-card reveal">
+            </a>
+            <a href="features.html#emergency-tokens" class="feature-card reveal">
                 <div class="icon">🎟️</div>
-                <h3>Emergency Tokens</h3>
+                <h3>Emergency Tokens <span class="feature-link">→</span></h3>
                 <p>Need access right now? Emergency tokens give you instant, one-time access when life demands it.</p>
-            </div>
-            <div class="feature-card reveal">
+            </a>
+            <a href="features.html#biometric-lock" class="feature-card reveal">
                 <div class="icon">🔐</div>
-                <h3>Biometric Lock</h3>
+                <h3>Biometric Lock <span class="feature-link">→</span></h3>
                 <p>Lock your settings behind Face ID or Touch ID so your impulsive self can't undo your work.</p>
-            </div>
-            <div class="feature-card reveal">
+            </a>
+            <a href="features.html#open-notes" class="feature-card reveal">
                 <div class="icon">📝</div>
-                <h3>Notes to Self</h3>
+                <h3>Open Notes <span class="feature-link">→</span></h3>
                 <p>Create quick "If this... then I'll..." rescue plans. When an urge hits, your counter-move is ready.</p>
-            </div>
-            <div class="feature-card reveal">
+            </a>
+            <a href="features.html#daily-quotes" class="feature-card reveal">
                 <div class="icon">✨</div>
-                <h3>Daily Inspiration</h3>
+                <h3>Daily Inspiration <span class="feature-link">→</span></h3>
                 <p>Get a fresh motivational quote each day to keep you focused and remind you why you started.</p>
-            </div>
+            </a>
         </div>
     </section>
 
