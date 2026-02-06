@@ -764,9 +764,24 @@
             margin-bottom: 48px;
         }
 
-        .video-container {
+        .video-carousel {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .video-slide {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+
+        .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
@@ -785,6 +800,46 @@
             height: 100%;
             border: none;
             border-radius: 20px;
+        }
+
+        .video-slide-caption {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .video-carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        /* Hide dots when there's only one video */
+        .video-carousel-dots:has(:only-child) {
+            display: none;
+        }
+
+        .video-carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .video-carousel-dot.active {
+            background: var(--accent);
+            box-shadow: 0 0 8px rgba(29, 192, 191, 0.4);
+        }
+
+        .video-carousel-dot:hover {
+            background: rgba(29, 192, 191, 0.5);
         }
 
         /* ═══════════════════════════════════════════
@@ -1681,18 +1736,29 @@
     <section class="video-section">
         <div class="video-header reveal">
             <div class="section-label">See It In Action</div>
-            <h2 class="section-title">Watch How ScrollOff Works</h2>
+            <h2 class="section-title">Explore ScrollOff</h2>
             <p class="section-desc">
-                A quick look at how you can turn your focus into guilt-free scroll time.
+                Get to know ScrollOff — what it does, who it's for, and how it helps you take back your time.
             </p>
         </div>
-        <div class="video-container reveal">
-            <iframe
-                src="https://www.youtube.com/embed/FdWlBJhHi5U"
-                title="ScrollOff Demo Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+        <div class="video-carousel reveal">
+            <div class="video-carousel-track" id="videoCarouselTrack">
+                <div class="video-slide" data-video-title="Who It's For">
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/FdWlBJhHi5U"
+                            title="ScrollOff — Who It's For"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="video-slide-caption">Who It's For</p>
+                </div>
+            </div>
+            <div class="video-carousel-dots" id="videoCarouselDots">
+                <button class="video-carousel-dot active" data-slide="0" aria-label="Video 1"></button>
+            </div>
         </div>
     </section>
 
@@ -2073,6 +2139,26 @@
         }
 
         startAutoSlide();
+
+        // Video Carousel
+        const videoTrack = document.getElementById('videoCarouselTrack');
+        const videoDots = document.querySelectorAll('.video-carousel-dot');
+        let currentVideo = 0;
+        const totalVideos = document.querySelectorAll('.video-slide').length;
+
+        function goToVideo(index) {
+            currentVideo = index;
+            videoTrack.style.transform = `translateX(-${index * 100}%)`;
+            videoDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        videoDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToVideo(index);
+            });
+        });
     </script>
 </body>
 </html>
