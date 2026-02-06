@@ -119,6 +119,81 @@
             box-shadow: 0 8px 24px rgba(29, 192, 191, 0.3);
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            z-index: 200;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(11, 15, 20, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 150;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--teal);
+        }
+
+        .mobile-menu .nav-cta {
+            margin-top: 16px;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+        }
+
         /* Content */
         .content {
             max-width: 800px;
@@ -251,8 +326,8 @@
         }
 
         .warning-box {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.2);
+            background: rgba(148, 163, 184, 0.1);
+            border: 1px solid rgba(148, 163, 184, 0.2);
             border-radius: 12px;
             padding: 20px;
             margin: 24px 0;
@@ -319,6 +394,14 @@
         }
 
         @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
             .nav-links a:not(.nav-cta) {
                 display: none;
             }
@@ -364,12 +447,29 @@
             </a>
             <div class="nav-links">
                 <a href="index.html#how">How It Works</a>
-                <a href="index.html#features">Features</a>
+                <a href="features.html">Features</a>
+                <a href="who-is-this-for.html">Who's It For</a>
+                <a href="calculator.html">Time Wasted</a>
                 <a href="index.html#pricing">Pricing</a>
                 <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank">Download</a>
             </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#how">How It Works</a>
+        <a href="features.html">Features</a>
+        <a href="who-is-this-for.html">Who's It For</a>
+        <a href="calculator.html">Time Wasted</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank">Download</a>
+    </div>
 
     <!-- Content -->
     <main class="content">
@@ -530,5 +630,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+    </script>
 </body>
 </html>

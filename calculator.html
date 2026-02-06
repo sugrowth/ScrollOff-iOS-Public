@@ -411,6 +411,116 @@
             color: var(--teal);
         }
 
+        /* Calculator Subtitle */
+        .calculator-subtitle {
+            text-align: center;
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .calculator-subtitle strong {
+            color: var(--teal);
+        }
+
+        /* Category Inputs */
+        .category-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .category-input {
+            background: var(--dark-surface);
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+            width: 44px;
+            height: 44px;
+            background: rgba(29, 192, 191, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .category-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .category-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .category-examples {
+            font-size: 0.8rem;
+            color: var(--gray-text);
+        }
+
+        .category-slider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .category-slider .slider {
+            flex: 1;
+        }
+
+        .category-value {
+            min-width: 70px;
+            text-align: right;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--teal);
+        }
+
+        .total-display {
+            background: linear-gradient(135deg, rgba(29, 192, 191, 0.15) 0%, rgba(11, 127, 149, 0.1) 100%);
+            border: 1px solid rgba(29, 192, 191, 0.3);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .total-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--gray-text);
+            margin-bottom: 8px;
+        }
+
+        .total-value {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .total-hint {
+            font-size: 0.85rem;
+            color: var(--gray-text);
+        }
+
         /* Results */
         .results {
             display: none;
@@ -869,52 +979,85 @@
     <section class="calculator-section">
         <div class="calculator-container">
             <div class="calculator-card">
-                <h2 class="calculator-title">Enter Your Daily Screen Time</h2>
+                <h2 class="calculator-title">How Much Time Do You Waste Daily?</h2>
+                <p class="calculator-subtitle">Only count time you <strong>regret</strong> — mindless scrolling, not productive use like emails or work apps.</p>
 
-                <div class="input-group">
-                    <label class="input-label">How many hours do you spend on your phone each day?</label>
-                    <div class="input-row">
-                        <div class="input-field">
-                            <input type="number" id="hours" min="0" max="16" value="4" />
-                            <span>hours</span>
+                <div class="category-inputs">
+                    <div class="category-input">
+                        <div class="category-header">
+                            <span class="category-icon">📱</span>
+                            <div class="category-info">
+                                <span class="category-name">Social Media</span>
+                                <span class="category-examples">Instagram, TikTok, Facebook, Twitter/X, Snapchat</span>
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <input type="number" id="minutes" min="0" max="59" value="30" />
-                            <span>minutes</span>
-                        </div>
-                    </div>
-                    <div class="slider-container">
-                        <input type="range" class="slider" id="timeSlider" min="0" max="720" value="270" />
-                        <div class="slider-labels">
-                            <span>0h</span>
-                            <span>3h</span>
-                            <span>6h</span>
-                            <span>9h</span>
-                            <span>12h</span>
+                        <div class="category-slider">
+                            <input type="range" class="slider" id="socialSlider" min="0" max="300" value="90" />
+                            <span class="category-value" id="socialValue">1h 30m</span>
                         </div>
                     </div>
-                    <p class="average-hint">Global average: <strong>4h 37m</strong> on mobile daily</p>
+
+                    <div class="category-input">
+                        <div class="category-header">
+                            <span class="category-icon">🎬</span>
+                            <div class="category-info">
+                                <span class="category-name">Video Streaming</span>
+                                <span class="category-examples">YouTube, Netflix, TikTok videos, Reels, Shorts</span>
+                            </div>
+                        </div>
+                        <div class="category-slider">
+                            <input type="range" class="slider" id="videoSlider" min="0" max="300" value="60" />
+                            <span class="category-value" id="videoValue">1h</span>
+                        </div>
+                    </div>
+
+                    <div class="category-input">
+                        <div class="category-header">
+                            <span class="category-icon">🎮</span>
+                            <div class="category-info">
+                                <span class="category-name">Gaming</span>
+                                <span class="category-examples">Mobile games, casual games, puzzle games</span>
+                            </div>
+                        </div>
+                        <div class="category-slider">
+                            <input type="range" class="slider" id="gamingSlider" min="0" max="300" value="30" />
+                            <span class="category-value" id="gamingValue">30m</span>
+                        </div>
+                    </div>
+
+                    <div class="category-input">
+                        <div class="category-header">
+                            <span class="category-icon">💬</span>
+                            <div class="category-info">
+                                <span class="category-name">Messaging (non-essential)</span>
+                                <span class="category-examples">WhatsApp groups, Discord, casual texting</span>
+                            </div>
+                        </div>
+                        <div class="category-slider">
+                            <input type="range" class="slider" id="messagingSlider" min="0" max="300" value="45" />
+                            <span class="category-value" id="messagingValue">45m</span>
+                        </div>
+                    </div>
+
+                    <div class="category-input">
+                        <div class="category-header">
+                            <span class="category-icon">🌐</span>
+                            <div class="category-info">
+                                <span class="category-name">Random Browsing</span>
+                                <span class="category-examples">Reddit, news sites, random websites, shopping</span>
+                            </div>
+                        </div>
+                        <div class="category-slider">
+                            <input type="range" class="slider" id="browsingSlider" min="0" max="300" value="45" />
+                            <span class="category-value" id="browsingValue">45m</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="input-group">
-                    <label class="input-label">What percentage of that time feels regretted or unintentional?</label>
-                    <div class="input-row">
-                        <div class="input-field">
-                            <input type="number" id="regretPercent" min="0" max="100" value="60" />
-                            <span>%</span>
-                        </div>
-                    </div>
-                    <div class="slider-container">
-                        <input type="range" class="slider" id="regretSlider" min="0" max="100" value="60" />
-                        <div class="slider-labels">
-                            <span>0%</span>
-                            <span>25%</span>
-                            <span>50%</span>
-                            <span>75%</span>
-                            <span>100%</span>
-                        </div>
-                    </div>
-                    <p class="average-hint">Research shows <strong>60%</strong> of sessions end in regret</p>
+                <div class="total-display">
+                    <span class="total-label">Total Wasted Time:</span>
+                    <span class="total-value" id="totalTime">4h 30m</span>
+                    <span class="total-hint">per day</span>
                 </div>
             </div>
 
@@ -922,7 +1065,7 @@
             <div class="results visible" id="results">
                 <div class="results-header">
                     <h2>Your Wasted Time</h2>
-                    <p>Based on <span id="totalDaily">4h 30m</span> daily with <span id="regretDisplay">60%</span> regret</p>
+                    <p>Based on <span id="totalDaily">4h 30m</span> of wasted screen time daily</p>
                     <div class="severity-badge yellow" id="severityBadge">⚠️ Moderate Concern</div>
                 </div>
 
@@ -1019,9 +1162,9 @@
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
                         Start Earning Your Time
                     </a>
-                    <button class="download-btn" id="downloadPdf" onclick="downloadAsPDF()">
+                    <button class="download-btn" id="downloadBtn" onclick="downloadResults()">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v6h4V9h3.67L12 2z"/></svg>
-                        Download Results as PDF
+                        Download Results
                     </button>
                 </div>
             </div>
@@ -1048,11 +1191,11 @@
                 <div class="footer-copy">© 2026 Sugrowth. All rights reserved.</div>
             </div>
             <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="features.html">Features</a>
-                <a href="who-is-this-for.html">Who's It For</a>
                 <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="https://github.com/sugrowth/ScrollOff-iOS-Public/issues" target="_blank">Support</a>
                 <a href="mailto:sugrowth+scrolloff.ios@gmail.com">Contact</a>
+                <a href="https://github.com/sugrowth/ScrollOff-iOS-Public" target="_blank">GitHub</a>
             </div>
         </div>
     </footer>
@@ -1068,12 +1211,14 @@
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Calculator Logic
-        const hoursInput = document.getElementById('hours');
-        const minutesInput = document.getElementById('minutes');
-        const timeSlider = document.getElementById('timeSlider');
-        const regretInput = document.getElementById('regretPercent');
-        const regretSlider = document.getElementById('regretSlider');
+        // Category Sliders
+        const sliders = {
+            social: { slider: document.getElementById('socialSlider'), display: document.getElementById('socialValue') },
+            video: { slider: document.getElementById('videoSlider'), display: document.getElementById('videoValue') },
+            gaming: { slider: document.getElementById('gamingSlider'), display: document.getElementById('gamingValue') },
+            messaging: { slider: document.getElementById('messagingSlider'), display: document.getElementById('messagingValue') },
+            browsing: { slider: document.getElementById('browsingSlider'), display: document.getElementById('browsingValue') }
+        };
 
         function formatTime(minutes) {
             if (minutes < 60) return `${Math.round(minutes)}m`;
@@ -1089,10 +1234,19 @@
         }
 
         function calculate() {
-            const totalMinutes = parseInt(hoursInput.value || 0) * 60 + parseInt(minutesInput.value || 0);
-            const regretPercent = parseInt(regretInput.value || 0) / 100;
+            // Get total from all category sliders
+            let totalMinutes = 0;
+            for (const key in sliders) {
+                const mins = parseInt(sliders[key].slider.value) || 0;
+                sliders[key].display.textContent = formatTime(mins);
+                totalMinutes += mins;
+            }
 
-            const wastedMinutesDaily = totalMinutes * regretPercent;
+            // Update total display
+            document.getElementById('totalTime').textContent = formatTime(totalMinutes);
+
+            // Since all time is already unproductive, no regret percentage needed
+            const wastedMinutesDaily = totalMinutes;
             const wastedMinutesWeekly = wastedMinutesDaily * 7;
             const wastedMinutesMonthly = wastedMinutesDaily * 30;
             const wastedMinutesYearly = wastedMinutesDaily * 365;
@@ -1100,7 +1254,6 @@
 
             // Update display
             document.getElementById('totalDaily').textContent = formatTime(totalMinutes);
-            document.getElementById('regretDisplay').textContent = `${Math.round(regretPercent * 100)}%`;
 
             document.getElementById('wastedDaily').textContent = formatTime(wastedMinutesDaily);
             document.getElementById('wastedWeekly').textContent = formatHours(wastedMinutesWeekly / 60);
@@ -1110,7 +1263,7 @@
             // Calculate perspectives
             const booksPerYear = Math.round(wastedHoursYearly / 20); // 20 hours per book
             const workoutsPerYear = Math.round(wastedHoursYearly / 3); // 3 hours per workout (including prep)
-            const skillMonths = Math.max(1, Math.round(300 / (wastedMinutesWeekly / 60 / 4))); // 300 hours to learn skill
+            const skillMonths = wastedMinutesWeekly > 0 ? Math.max(1, Math.round(300 / (wastedMinutesWeekly / 60 / 4))) : 99;
             const moviesPerYear = Math.round(wastedHoursYearly / 2); // 2 hours per movie
 
             document.getElementById('books').textContent = booksPerYear;
@@ -1130,18 +1283,18 @@
             // Saved time (half of wasted)
             document.getElementById('savedTime').textContent = `${Math.round(wastedHoursYearly / 2)} hours`;
 
-            // Update severity badge based on wasted hours daily
-            const wastedHoursDaily = wastedMinutesDaily / 60;
+            // Update severity badge based on total hours daily
+            const totalHoursDaily = totalMinutes / 60;
             const badge = document.getElementById('severityBadge');
             badge.classList.remove('green', 'yellow', 'orange', 'red');
 
-            if (wastedHoursDaily < 1) {
+            if (totalHoursDaily < 1) {
                 badge.className = 'severity-badge green';
                 badge.textContent = '✓ Looking Good!';
-            } else if (wastedHoursDaily < 2) {
+            } else if (totalHoursDaily < 2) {
                 badge.className = 'severity-badge yellow';
                 badge.textContent = '⚠️ Room for Improvement';
-            } else if (wastedHoursDaily < 4) {
+            } else if (totalHoursDaily < 4) {
                 badge.className = 'severity-badge orange';
                 badge.textContent = '⚠️ Moderate Concern';
             } else {
@@ -1150,43 +1303,17 @@
             }
         }
 
-        // Sync slider with inputs
-        timeSlider.addEventListener('input', () => {
-            const totalMinutes = parseInt(timeSlider.value);
-            hoursInput.value = Math.floor(totalMinutes / 60);
-            minutesInput.value = totalMinutes % 60;
-            calculate();
-        });
-
-        hoursInput.addEventListener('input', () => {
-            const totalMinutes = parseInt(hoursInput.value || 0) * 60 + parseInt(minutesInput.value || 0);
-            timeSlider.value = Math.min(720, totalMinutes);
-            calculate();
-        });
-
-        minutesInput.addEventListener('input', () => {
-            const totalMinutes = parseInt(hoursInput.value || 0) * 60 + parseInt(minutesInput.value || 0);
-            timeSlider.value = Math.min(720, totalMinutes);
-            calculate();
-        });
-
-        regretSlider.addEventListener('input', () => {
-            regretInput.value = regretSlider.value;
-            calculate();
-        });
-
-        regretInput.addEventListener('input', () => {
-            regretSlider.value = regretInput.value;
-            calculate();
-        });
+        // Add event listeners to all category sliders
+        for (const key in sliders) {
+            sliders[key].slider.addEventListener('input', calculate);
+        }
 
         // Initial calculation
         calculate();
 
-        // PDF Download function
-        function downloadAsPDF() {
+        // Download function
+        function downloadResults() {
             const totalDaily = document.getElementById('totalDaily').textContent;
-            const regretDisplay = document.getElementById('regretDisplay').textContent;
             const wastedDaily = document.getElementById('wastedDaily').textContent;
             const wastedWeekly = document.getElementById('wastedWeekly').textContent;
             const wastedMonthly = document.getElementById('wastedMonthly').textContent;
@@ -1200,15 +1327,25 @@
 ║                    from ScrollOff                            ║
 ╚══════════════════════════════════════════════════════════════╝
 
-📱 Daily Screen Time: ${totalDaily}
-📊 Regretted Usage: ${regretDisplay}
+📱 Daily Wasted Screen Time: ${totalDaily}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BREAKDOWN BY CATEGORY:
+
+   📱 Social Media:     ${document.getElementById('socialValue').textContent}
+   🎬 Video Streaming:  ${document.getElementById('videoValue').textContent}
+   🎮 Gaming:           ${document.getElementById('gamingValue').textContent}
+   💬 Messaging:        ${document.getElementById('messagingValue').textContent}
+   🌐 Random Browsing:  ${document.getElementById('browsingValue').textContent}
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ${severity}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-⏰ TIME YOU'RE WASTING:
+⏰ TIME YOU'RE LOSING:
 
    Per Day:    ${wastedDaily}
    Per Week:   ${wastedWeekly}
