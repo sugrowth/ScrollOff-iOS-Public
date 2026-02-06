@@ -268,7 +268,8 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--teal);
         }
 
@@ -351,7 +352,8 @@
             transition: color 0.2s;
         }
 
-        .mobile-menu a:hover {
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
             color: var(--teal);
         }
 
@@ -1563,7 +1565,7 @@
                 ScrollOff
             </a>
             <div class="nav-links">
-                <a href="#how">How It Works</a>
+                <a href="#how" class="active">How It Works</a>
                 <a href="features.html">Features</a>
                 <a href="who-is-this-for.html">Who's It For</a>
                 <a href="calculator.html">Time Wasted</a>
@@ -1580,7 +1582,7 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#how" onclick="closeMenu()">How It Works</a>
+        <a href="#how" class="active" onclick="closeMenu()">How It Works</a>
         <a href="features.html">Features</a>
         <a href="who-is-this-for.html">Who's It For</a>
         <a href="calculator.html">Time Wasted</a>
