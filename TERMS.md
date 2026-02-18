@@ -110,7 +110,7 @@ These Terms shall be governed by and construed in accordance with the laws of th
 
 If you have any questions about these Terms of Use, please contact us:
 
-- **Email**: sugrowth+scrolloff.ios@gmail.com
+- **Email**: sugrowth+scrolloff@gmail.com
 - **GitHub**: https://github.com/sugrowth/ScrollOff-Public/issues
 
 ## Apple's Standard EULA
@@ -119,4 +119,4 @@ In addition to these terms, your use of ScrollOff is also subject to [Apple's St
 
 ---
 
-**Summary**: By using ScrollOff, you agree to these terms. Subscriptions auto-renew unless cancelled 24 hours before renewal. All purchases are processed by Apple. We don't collect your data. For questions, contact us at sugrowth+scrolloff.ios@gmail.com.
+**Summary**: By using ScrollOff, you agree to these terms. Subscriptions auto-renew unless cancelled 24 hours before renewal. All purchases are processed by Apple. We don't collect your data. For questions, contact us at sugrowth+scrolloff@gmail.com.
