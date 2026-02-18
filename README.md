@@ -177,7 +177,7 @@ We believe that technology should enhance our lives, not consume them. ScrollOff
 
 ## License
 
-Copyright © 2025 Sugrowth. All rights reserved.
+Copyright © 2025-2026 Sugrowth. All rights reserved.
 
 This software and its content are protected by copyright law. Unauthorized reproduction or distribution of this software, or any portion of it, may result in severe civil and criminal penalties.
 
