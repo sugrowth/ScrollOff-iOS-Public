@@ -85,7 +85,7 @@ Earn credits by staying away from blocked apps (5 minutes earned per hour of sta
 - 3-day credit rollover
 - 7-day usage insights
 
-### Pro - $8.99/month or $71.99/year
+### Pro - $8.99/month or $69.99/year
 - **14-day free trial**
 - All Premium features
 - 5-minute peeks

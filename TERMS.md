@@ -8,7 +8,7 @@ By downloading, installing, or using ScrollOff ("the App"), you agree to be boun
 
 ## Description of Service
 
-ScrollOff is an iOS application designed to help users manage their screen time through a credit-based system. Users earn time credits by staying away from selected apps and can spend those credits for temporary access ("peek") when needed.
+ScrollOff is a mobile application designed to help users manage their screen time through a credit-based system. Users earn time credits by staying away from selected apps and can spend those credits for temporary access ("peek") when needed.
 
 ## Subscriptions
 
@@ -20,15 +20,15 @@ ScrollOff offers the following subscription options:
 |------|-------|----------|
 | **Free** | $0 | Block up to 3 apps, 45-minute daily earning cap, same-day credits only |
 | **Premium** | $4.99/month | Unlimited app blocking, 90-minute daily earning cap, 3-day credit rollover, 7-day insights |
-| **Pro** | $8.99/month or $71.99/year | All Premium features plus 120-minute daily cap, 7-day rollover, 30-day insights, biometric protection |
+| **Pro** | $8.99/month or $69.99/year | All Premium features plus 120-minute daily cap, 7-day rollover, 30-day insights, biometric protection |
 
-*Prices shown in USD. Actual prices may vary by region and are determined by the App Store.*
+*Prices shown in USD. Actual prices may vary by region and are determined by the App Store or Google Play Store.*
 
 ### Auto-Renewal Terms
 
 - **Subscription Length**: Monthly subscriptions renew every month. Annual subscriptions renew every year.
 - **Automatic Renewal**: Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.
-- **Billing**: Payment will be charged to your Apple ID account at confirmation of purchase.
+- **Billing**: Payment will be charged to your Apple ID or Google Play account at confirmation of purchase.
 - **Renewal Charge**: Your account will be charged for renewal within 24 hours prior to the end of the current period at the same price.
 
 ### Free Trial
@@ -41,11 +41,19 @@ ScrollOff offers the following subscription options:
 
 You can manage or cancel your subscription at any time:
 
+**On iOS:**
 1. Open the **Settings** app on your iPhone or iPad
 2. Tap your **Apple ID** at the top
 3. Tap **Subscriptions**
 4. Select **ScrollOff**
 5. Choose **Cancel Subscription** or modify your plan
+
+**On Android:**
+1. Open the **Google Play Store** app
+2. Tap your **profile icon** at the top right
+3. Tap **Payments & subscriptions** → **Subscriptions**
+4. Select **ScrollOff**
+5. Choose **Cancel subscription** or modify your plan
 
 Cancellation takes effect at the end of the current billing period. You will retain access to premium features until then.
 
@@ -57,7 +65,7 @@ ScrollOff offers consumable in-app purchases called "Emergency Tokens" that prov
 
 ### Refunds
 
-All purchases are processed by Apple. For refund requests, please contact Apple Support or visit [reportaproblem.apple.com](https://reportaproblem.apple.com).
+All purchases are processed by Apple (iOS) or Google (Android). For refund requests, please contact [Apple Support](https://reportaproblem.apple.com) or [Google Play Support](https://support.google.com/googleplay/answer/2479637).
 
 ## User Responsibilities
 
@@ -80,15 +88,20 @@ THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IM
 
 TO THE MAXIMUM EXTENT PERMITTED BY LAW, SUGROWTH SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE APP.
 
-## Screen Time API Usage
+## App Blocking Technology
 
-ScrollOff uses Apple's Screen Time API (Family Controls) to provide app blocking functionality. This is used solely for:
+ScrollOff uses platform-specific APIs to provide app blocking functionality:
+
+- **iOS**: Apple's Screen Time API (Family Controls)
+- **Android**: Android's UsageStats and Accessibility Services
+
+These are used solely for:
 
 - Allowing you to select apps to block
 - Displaying shield screens on blocked apps
 - Monitoring when blocked apps are accessed to deduct credits
 
-All Screen Time data remains on your device and is never transmitted externally.
+All data remains on your device and is never transmitted externally.
 
 ## Privacy
 
@@ -113,10 +126,13 @@ If you have any questions about these Terms of Use, please contact us:
 - **Email**: sugrowth+scrolloff@gmail.com
 - **GitHub**: https://github.com/sugrowth/ScrollOff-Public/issues
 
-## Apple's Standard EULA
+## Platform-Specific Terms
 
-In addition to these terms, your use of ScrollOff is also subject to [Apple's Standard End User License Agreement (EULA)](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
+In addition to these terms, your use of ScrollOff is also subject to:
+
+- **iOS**: [Apple's Standard End User License Agreement (EULA)](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/)
+- **Android**: [Google Play Terms of Service](https://play.google.com/about/play-terms/)
 
 ---
 
-**Summary**: By using ScrollOff, you agree to these terms. Subscriptions auto-renew unless cancelled 24 hours before renewal. All purchases are processed by Apple. We don't collect your data. For questions, contact us at sugrowth+scrolloff@gmail.com.
+**Summary**: By using ScrollOff, you agree to these terms. Subscriptions auto-renew unless cancelled 24 hours before renewal. All purchases are processed by Apple (iOS) or Google (Android). We don't collect your data. For questions, contact us at sugrowth+scrolloff@gmail.com.

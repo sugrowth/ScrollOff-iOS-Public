@@ -4,17 +4,17 @@
 
 ## Overview
 
-ScrollOff is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use the ScrollOff iOS application.
+ScrollOff is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use the ScrollOff mobile application.
 
 ## Data Collection
 
 **ScrollOff does not collect, transmit, or share any personal data.**
 
-All app data is stored locally on your device using Apple's SwiftData framework. We have no access to your data, and your data never leaves your device.
+All app data is stored locally on your device. We have no access to your data, and your data never leaves your device.
 
 ## Information Stored Locally on Your Device
 
-ScrollOff stores the following information locally on your iOS device:
+ScrollOff stores the following information locally on your device:
 
 - **Time balance data**: Your earned and spent focus time
 - **Blocked apps list**: Apps you've chosen to block
@@ -25,15 +25,18 @@ ScrollOff stores the following information locally on your iOS device:
 
 This data is stored exclusively on your device and is never transmitted to our servers or any third party.
 
-## Apple Services
+## Platform Services
 
-ScrollOff uses the following Apple-provided services:
+ScrollOff uses the following platform-provided services:
 
-### Screen Time API
-ScrollOff uses Apple's Screen Time API to monitor and block apps. All monitoring happens locally on your device. No usage data is transmitted to us or any third party.
+### App Blocking
+- **iOS**: ScrollOff uses Apple's Screen Time API to monitor and block apps.
+- **Android**: ScrollOff uses Android's UsageStats and Accessibility Services to monitor and block apps.
 
-### StoreKit (In-App Purchases)
-If you purchase a subscription or consumable item (emergency tokens), the transaction is processed entirely by Apple through StoreKit. We do not collect or store your payment information. Apple's privacy policy governs how your purchase data is handled.
+All monitoring happens locally on your device. No usage data is transmitted to us or any third party.
+
+### In-App Purchases
+If you purchase a subscription or consumable item (emergency tokens), the transaction is processed entirely by Apple (iOS) or Google (Android). We do not collect or store your payment information. The respective platform's privacy policy governs how your purchase data is handled.
 
 ### Local Notifications
 ScrollOff sends local notifications (peek expiration alerts, balance reminders) directly on your device. These notifications do not involve any external servers.
@@ -49,11 +52,11 @@ ScrollOff does not use any third-party analytics, tracking, or advertising servi
 
 ## Face ID / Touch ID
 
-If you enable biometric authentication, ScrollOff uses Apple's Face ID or Touch ID to secure app access. Biometric data is processed entirely by iOS and never leaves your device. We do not have access to your biometric information.
+If you enable biometric authentication, ScrollOff uses your device's biometric system (Face ID/Touch ID on iOS, fingerprint/face unlock on Android) to secure app access. Biometric data is processed entirely by your device's operating system and never leaves your device. We do not have access to your biometric information.
 
 ## Data Backup
 
-If you use iCloud Backup, your locally stored ScrollOff data may be included in your device backup according to Apple's iCloud terms. This is controlled by your iOS backup settings, not by ScrollOff.
+If you use iCloud Backup (iOS) or Google Backup (Android), your locally stored ScrollOff data may be included in your device backup according to the respective platform's terms. This is controlled by your device's backup settings, not by ScrollOff.
 
 ## Data Deletion
 
