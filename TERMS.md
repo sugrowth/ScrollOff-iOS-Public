@@ -111,7 +111,7 @@ These Terms shall be governed by and construed in accordance with the laws of th
 If you have any questions about these Terms of Use, please contact us:
 
 - **Email**: sugrowth+scrolloff.ios@gmail.com
-- **GitHub**: https://github.com/sugrowth/ScrollOff-iOS-Public/issues
+- **GitHub**: https://github.com/sugrowth/ScrollOff-Public/issues
 
 ## Apple's Standard EULA
 
